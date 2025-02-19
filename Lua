@@ -1,19 +1,17 @@
-local StarterGui = game:GetService("StarterGui")
-
 local function notify(title, text, duration)
-    StarterGui:SetCore("SendNotification", {
+    game:GetService("StarterGui"):SetCore("SendNotification", {
         Title = title,
         Text = text,
         Duration = duration
     })
 end
 
-if setclipboard then
-    setclipboard("https://saturnhub.netlify.app")
-end
+setclipboard("https://saturnhub.netlify.app")
 
+while task.wait() do
 notify("🚨 Script Unavailable 🚨", "This script is no longer available. Outdated & Detected.", 5)
-task.wait(5)
+task.wait(2.5)
 notify("⚠️ Recommendation ⚠️", "I HIGHLY Recommend You Buy The Paid Version!", 5)
-task.wait(5)
+task.wait(2.5)
 notify("📋 Website Link Copied!", "Check it out here: https://saturnhub.netlify.app", 5)
+end
